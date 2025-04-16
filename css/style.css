@@ -1,0 +1,157 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+/* VARIABLES DECLARATIONS */
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+
+/* GENERAL RULES */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+/* BEGIN NAVBAR RULES */
+nav {
+    display: flex;
+    background-color: var(--primary-color);
+    align-items: center;
+    height: 85px;
+    padding-right: 10px;
+    user-select: none;
+}
+
+
+/* NAVBAR LOGO */
+.navbar-logo img {
+    width: 70px;
+    margin: 10px;
+}
+
+
+/* NAVBAR SEARCH BAR */
+input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+.navbar-search-bar {
+    width: 640px;
+    margin: auto 20px;
+    flex: 1;
+}
+
+
+.navbar-search-bar form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: var(--secondary-color);
+    border-radius: 25px;
+    border: 4px solid var(--secondary-color);
+    height: 42.5px;
+}
+
+
+.navbar-search-bar input[type="search"] {
+    width: 100%;
+    height: 100%;
+    min-width: 110px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 15px;
+}
+
+
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+
+/* NAVBAR LINKS */
+.navbar-links a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 0.55em 1em;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.navbar-links a:before,
+.navbar-links a:after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--secondary-color);
+    content: "";
+    opacity: 0;
+    transition: 0.25s;
+}
+
+
+.navbar-links a:before {
+    top: 0;
+    transform: translateY(-10px);
+}
+
+
+.navbar-links a:after {
+    bottom: 0;
+    transform: translateY(10px);
+}
+
+
+.navbar-links a:hover:before,
+.navbar-links a:hover:after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* NAVBAR BUTTONS */
+.navbar-buttons button {
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+
+/* RESPONSIVE PROPERTIES */
+.navbar-buttons,
+.navbar-links {
+    display: flex;
+}
+
+
+/* HOVER PRIRPIETIES */
+nav div *:hover:not(.navbar-search-bar form, input) {
+    opacity: 0.7;
+}
+
+/* END NAVBAR RULES */
