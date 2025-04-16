@@ -1,100 +1,57 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 
-
-/* VARIABLES DECLARATIONS */
+/* VARIABILI */
 :root {
     --primary-color: black;
     --secondary-color: white;
 }
 
-
-/* GENERAL RULES */
+/* REGOLE GENERALI */
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
 }
 
-
-
-/* BEGIN NAVBAR RULES */
+/* NAVBAR */
 nav {
     display: flex;
+    justify-content: space-between;
     background-color: var(--primary-color);
     align-items: center;
     height: 85px;
-    padding-right: 10px;
+    padding: 0 10px;
     user-select: none;
 }
 
+/* NAVBAR LOGO  */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
 
-/* NAVBAR LOGO */
 .navbar-logo img {
     width: 70px;
     margin: 10px;
 }
 
-
-/* NAVBAR SEARCH BAR */
-input::-webkit-search-cancel-button {
-    display: none;
-}
-
-
-.navbar-search-bar {
-    width: 640px;
-    margin: auto 20px;
+/* NAVBAR LINKS */
+.navbar-links {
+    display: flex;
+    justify-content: center;
     flex: 1;
 }
 
-
-.navbar-search-bar form {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: var(--secondary-color);
-    border-radius: 25px;
-    border: 4px solid var(--secondary-color);
-    height: 42.5px;
-}
-
-
-.navbar-search-bar input[type="search"] {
-    width: 100%;
-    height: 100%;
-    min-width: 110px;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    border-radius: 20px;
-    padding: 0 15px;
-}
-
-
-.fa {
-    box-sizing: border-box;
-    padding: 10px;
-    width: 42.5px;
-    height: 100%;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 1.2em;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    cursor: pointer;
-}
-
-
-/* NAVBAR LINKS */
 .navbar-links a {
     color: var(--secondary-color);
     font-weight: 600;
     font-size: 1.2em;
-    padding: 0.55em 1em;
+    padding: 0.55em 2em;
+    margin: 0 3em;
     text-decoration: none;
     position: relative;
     cursor: pointer;
+    text-align: center;
 }
-
 
 .navbar-links a:before,
 .navbar-links a:after {
@@ -108,18 +65,15 @@ input::-webkit-search-cancel-button {
     transition: 0.25s;
 }
 
-
 .navbar-links a:before {
     top: 0;
     transform: translateY(-10px);
 }
 
-
 .navbar-links a:after {
     bottom: 0;
     transform: translateY(10px);
 }
-
 
 .navbar-links a:hover:before,
 .navbar-links a:hover:after {
@@ -127,10 +81,14 @@ input::-webkit-search-cancel-button {
     transform: translateY(0);
 }
 
-
 /* NAVBAR BUTTONS */
+.navbar-buttons {
+    display: flex;
+}
+
 .navbar-buttons button {
     margin-left: 20px;
+    margin-right: 5px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -141,17 +99,7 @@ input::-webkit-search-cancel-button {
     cursor: pointer;
 }
 
-
-/* RESPONSIVE PROPERTIES */
-.navbar-buttons,
-.navbar-links {
-    display: flex;
-}
-
-
-/* HOVER PRIRPIETIES */
+/* EFFETTI HOVER */
 nav div *:hover:not(.navbar-search-bar form, input) {
     opacity: 0.7;
 }
-
-/* END NAVBAR RULES */
