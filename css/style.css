@@ -2,7 +2,7 @@
 
 /* VARIABILI */
 :root {
-    --primary-color: black;
+    --primary-color: rgb(12, 177, 189);
     --secondary-color: white;
 }
 
@@ -44,7 +44,7 @@ nav {
 .navbar-links a {
     color: var(--secondary-color);
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding: 0.55em 2em;
     margin: 0 3em;
     text-decoration: none;
